@@ -1,0 +1,9 @@
+{>"layouts/master" /}
+{<title}
+{title}
+{/title}
+{<body}
+
+    <h1>kraken Give your node.js express apps some extra arms</h1>
+    <h2>{title} {message}</h2>
+{/body}

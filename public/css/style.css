@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+body {
+font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei
+UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
+.logo {
+	padding:0;
+}
+#myCarousel {
+	margin:50px 0 0 0;
+}
+
+.btnxiala {
+    margin-left:30px;
+    width:158px;
+    height: 50px;
+    font-size: 20px;
+}
+.cssStyle{
+    width:200px;
+}
+
+
+
+#navbar-collapse ul {
+	margin-top: 0;
+}
+.carousel-inner img {
+	margin:0 auto;
+}/*
+.carousel-control {
+	font-size: 600px;
+	line-height: 400px;
+}*/
+.tab1 {
+	margin:30px 0;
+	color:#666;
+}
+.tab-h3 {
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 1px;
+	color:#0059B2;
+}
+.tab-p {
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #999;
+}
+.text-muted {
+	color: #fff3a6;
+	text-decoration: line-through;
+	text-align: center;
+}
+.tab1 .media-heading {
+	margin: 5px 0 20px 0;
+}
+.tab1 .col {
+	padding: 20px;
+}
+.infomation {
+	background-color: #eee;
+}
+#footer {
+	padding: 15px;
+	text-align: center;
+	background-color: #666;
+	border-top: 1px solid #ccc;
+	color:#eee;
+}
+.tab2 {
+	background-color: #eee;
+	padding:60px 20px;
+	text-align: center;
+}
+.tab3 {
+
+	padding:60px 20px;
+	text-align: center;
+}
+
+.tab2 img{
+	width: 50%;
+	height: 50%;
+
+}
+.tab3 img{
+
+	height: 60%;
+}
+.tab2 img{
+	padding:60px 0;
+}
+.tab3 img{
+	padding:60px 0;
+
+}
+.text h3 {
+font-size: 20px;
+}
+.text p {
+font-size: 14px;
+}
+
+.jumbotron{
+	margin-top: 50px;
+	margin-bottom: 1px;
+	background-image:  url(../img/bg.jpg);
+	color:#eee;
+}
+#infomation{
+	background-color :#eee;
+	padding:20px;
+}
+.infomation img {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.info-content{
+	background-color: #fff;
+	margin-top: 20px;
+	box-shadow: 2px 2px 3px #ccc;
+}
+
+.info-content h4 {
+	color: #333;
+	padding: 2px;
+}
+.info-content p {
+	line-height: 1.6;
+}
+
+.jumbotron h1 {
+	font-size: 36px;
+}
+.jumbotron h4 {
+	font-size: 18px;
+}
+
+
+.col-right {
+	background-color: #fff;
+	box-shadow: 2px 2px 3px #ccc;
+	margin-top: 35px;
+	padding-top:5px;
+
+
+}
+.col-right blockquote{
+	margin:0px;
+	padding:0px;
+}
+.col-right h2 {
+	font-size: 20px;
+	color:black;
+	padding:5px;
+}
+.col-right h4 {
+	color:#333;
+	line-height: 1.5;
+	padding-left: 10px;
+}
+.col-right p {
+	padding:10px;
+	line-height: 1.6;
+}
+
+#case {
+	padding:40px;
+	background-color: #eee;
+}
+#about {
+	background-color: #eee;
+	margin:15px;
+}
+#about .about {
+	background-color: #fff;
+	box-shadow: 2px 2px 3px #ccc;
+	margin-top: 12px;
+
+
+}
+#about h3 {
+	color:#333;
+	font-size: 20px;
+	border-bottom: 1px solid #eee;
+	padding:10px;
+
+}
+#about p {
+	color:#333;
+
+}
+
+.list-group {
+	margin-top: 10px;
+
+}
+.list-group a {
+	color:blue;
+	box-shadow: 2px 2px 3px #ccc;
+}
+
+
+@media (min-width: 768px) {
+	.tab-h2 {
+		font-size: 26px;
+	}
+	.tab-p {
+		font-size: 16px;
+	}
+	.text h3 {
+font-size: 20px;
+}
+.text p {
+font-size: 15px;
+}
+.tab2-text{
+	float: left;
+}
+.tab2-img {
+float: right;
+}
+
+
+.jumbotron h1 {
+	font-size: 30px;
+}
+.jumbotron h4 {
+	font-size: 16px;
+}
+.jumbotron h4 {
+	font-size: 16px;
+}
+.info-content h4 {
+	font-size: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#about h3 {
+
+	font-size: 19px;
+
+
+}
+
+#about p {
+	font-size: 14px
+
+}
+
+}
+
+
+
+@media (min-width: 992px) {
+	.tab-h2 {
+		font-size: 28px;
+	}
+	.tab-p {
+		font-size: 18px;
+	}
+	.text h3 {
+font-size: 20px;
+}
+.text p {
+font-size: 14px;
+}
+.tab2-text{
+	float: left;
+}
+.tab2-img {
+float: right;
+}
+.jumbotron h1 {
+	font-size: 33px;
+}
+.jumbotron h4 {
+	font-size: 17px;
+}
+.info-content h4 {
+	font-size: 18px;
+}
+#about h3 {
+
+	font-size: 20px;
+
+
+}
+#about p {
+	font-size: 16px
+
+}
+}
+
+@media (min-width: 1200px) {
+	.tab-h2 {
+		font-size: 30px;
+	}
+	.tab-p {
+		font-size: 20px;
+	}
+	.text h3 {
+font-size: 20px;
+}
+.text p {
+font-size: 14px;
+}
+.tab2-text{
+	float: left;
+}
+.tab2-img {
+ float: right;
+}
+
+.jumbotron h1 {
+	font-size: 36px;
+}
+.jumbotron h4 {
+	font-size: 18px;
+}
+.info-content h4 {
+	font-size: 20px;
+}
+
+#about h3 {
+
+	font-size: 22px;
+
+
+}
+#about p {
+	font-size: 16px
+
+}
+
+}

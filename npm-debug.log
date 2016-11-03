@@ -1,0 +1,126 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\nodejs\\node.exe',
+1 verbose cli   'D:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'mongoose' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.1
+4 verbose install initial load of C:\Users\shado\AppData\Roaming\npm\package.json
+5 verbose readDependencies loading dependencies from C:\Users\shado\AppData\Roaming\npm\package.json
+6 silly cache add args [ 'mongoose', null ]
+7 verbose cache add spec mongoose
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'mongoose',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'mongoose',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed mongoose@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for mongoose
+11 info addNameTag [ 'mongoose', 'latest' ]
+12 silly mapToRegistry name mongoose
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npm.taobao.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'mongoose',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'mongoose',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npm.taobao.org/mongoose
+17 verbose addNameTag registry:https://registry.npm.taobao.org/mongoose not in flight; fetching
+18 verbose request uri https://registry.npm.taobao.org/mongoose
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 20:32:49
+21 verbose request id 92c91b1ba8890495
+22 verbose etag "8f8e2-a4guGjCYf3JNHW0lYSu5jQ"
+23 http request GET https://registry.npm.taobao.org/mongoose
+24 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+25 info attempt registry request try #2 at 20:33:20
+26 verbose etag "8f8e2-a4guGjCYf3JNHW0lYSu5jQ"
+27 http request GET https://registry.npm.taobao.org/mongoose
+28 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+29 info attempt registry request try #3 at 20:34:41
+30 verbose etag "8f8e2-a4guGjCYf3JNHW0lYSu5jQ"
+31 http request GET https://registry.npm.taobao.org/mongoose
+32 silly get cb [ 304, undefined ]
+33 verbose etag https://registry.npm.taobao.org/mongoose from cache
+34 verbose get saving mongoose to C:\Users\shado\AppData\Roaming\npm-cache\registry.npm.taobao.org\mongoose\.cache.json
+35 verbose correctMkdir C:\Users\shado\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+36 silly addNameTag next cb for mongoose with tag latest
+37 silly addNamed mongoose@4.6.5
+38 verbose addNamed "4.6.5" is a plain semver version for mongoose
+39 silly mapToRegistry name mongoose
+40 silly mapToRegistry using default registry
+41 silly mapToRegistry registry https://registry.npm.taobao.org/
+42 silly mapToRegistry data Result {
+42 silly mapToRegistry   raw: 'mongoose',
+42 silly mapToRegistry   scope: null,
+42 silly mapToRegistry   name: 'mongoose',
+42 silly mapToRegistry   rawSpec: '',
+42 silly mapToRegistry   spec: 'latest',
+42 silly mapToRegistry   type: 'tag' }
+43 silly mapToRegistry uri https://registry.npm.taobao.org/mongoose
+44 verbose addRemoteTarball https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz not in flight; adding
+45 verbose addRemoteTarball [ 'https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz',
+45 verbose addRemoteTarball   '74eed37312e557c391d428c0cf3c8b8eb8959515' ]
+46 info retry fetch attempt 1 at 20:35:02
+47 info attempt registry request try #1 at 20:35:02
+48 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+49 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+50 info attempt registry request try #2 at 20:35:33
+51 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+52 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+53 info attempt registry request try #3 at 20:36:54
+54 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+55 error fetch failed https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+56 warn retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+57 info retry fetch attempt 2 at 20:37:25
+58 info attempt registry request try #1 at 20:37:25
+59 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+60 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+61 info attempt registry request try #2 at 20:37:56
+62 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+63 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+64 info attempt registry request try #3 at 20:39:17
+65 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+66 error fetch failed https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+67 warn retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+68 info retry fetch attempt 3 at 20:40:38
+69 info attempt registry request try #1 at 20:40:38
+70 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+71 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+72 info attempt registry request try #2 at 20:41:09
+73 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+74 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+75 info attempt registry request try #3 at 20:42:30
+76 http fetch GET https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+77 error fetch failed https://registry.npm.taobao.org/mongoose/download/mongoose-4.6.5.tgz
+78 verbose stack Error: tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+78 verbose stack     at ClientRequest.onError (D:\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+78 verbose stack     at ClientRequest.g (events.js:260:16)
+78 verbose stack     at emitOne (events.js:77:13)
+78 verbose stack     at ClientRequest.emit (events.js:169:7)
+78 verbose stack     at Socket.socketErrorListener (_http_client.js:269:9)
+78 verbose stack     at emitOne (events.js:77:13)
+78 verbose stack     at Socket.emit (events.js:169:7)
+78 verbose stack     at emitErrorNT (net.js:1269:8)
+78 verbose stack     at nextTickCallbackWith2Args (node.js:442:9)
+78 verbose stack     at process._tickCallback (node.js:356:17)
+79 verbose cwd F:\node\DemoApp
+80 error Windows_NT 10.0.14393
+81 error argv "D:\\nodejs\\node.exe" "D:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "mongoose"
+82 error node v4.6.1
+83 error npm  v2.15.9
+84 error code ECONNRESET
+85 error network tunneling socket could not be established, cause=connect ETIMEDOUT 10.1.27.102:8080
+85 error network This is most likely not a problem with npm itself
+85 error network and is related to network connectivity.
+85 error network In most cases you are behind a proxy or have bad network settings.
+85 error network
+85 error network If you are behind a proxy, please make sure that the
+85 error network 'proxy' config is set properly.  See: 'npm help config'
+86 verbose exit [ 1, true ]

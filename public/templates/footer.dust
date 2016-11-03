@@ -1,0 +1,8 @@
+{>"admin/products" /}
+{<footer}
+    <div class="container " id="footer">
+        <p>Copyright © 2011 中国大地财产保险股份有限公司 All Rights Reserved 版权所有 复制必究!</p>
+        <p>ICP许可证号 沪ICP备09091317号-1</p>
+    </div>
+{/footer}
+

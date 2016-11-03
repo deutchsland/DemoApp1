@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>{+title /}</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.min.js"></script>
+
+    <script src="/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Wrapper for page content to push down footer */
+        #wrap {
+            min-height: 99%;
+            height: auto !important;
+            height: 99%;
+            /* Negative indent footer by it's height */
+            margin: 0 auto -20px;
+        }
+
+        /* Set the fixed height of the footer here */
+        #push,
+        #footer {
+            padding: 15px;
+
+            text-align: center;
+            background-color: #666;
+            border-top: 1px solid #ccc;
+            color: #eee;
+        }
+        #footer.container{
+            margin-bottom: 0px;
+        }
+
+
+        /* Lastly, apply responsive CSS fixes as necessary */
+        @media (max-width: 767px) {
+            #footer {
+                margin-left: -10px;
+                margin-right: -10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        @-ms-viewport       { width: device-width; }
+        body {
+            padding-top: 1px;
+            padding-bottom: 0px;
+            font-family: "Helvetica Neue", Helvetica, STheiti, 微软雅黑, 宋体, Arial, Tahoma, sans-serif, serif;
+        }
+
+        h1,.h1,h2,.h2,h3,.h3,h4,.h4,.lead {
+            font-family: "Helvetica Neue", Helvetica, STheiti, 微软雅黑, 宋体, Arial, Tahoma, sans-serif, serif;
+        }
+
+        pre code {
+            background: transparent;
+        }
+
+        .required-indicator {
+            color: #CC0000;
+            display: inline-block;
+            font-weight: bold;
+            margin-left: 0.3em;
+            position: relative;
+            top: 0.1em;
+        }
+
+
+
+    </style>
+</head>
+<body>
+{+body /}
+</body>
+<footer>
+     {+footer /}
+</footer>
+
+</html>
