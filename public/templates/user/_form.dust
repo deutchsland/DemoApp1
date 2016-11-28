@@ -1,0 +1,32 @@
+<form method="post" id="userInfoForm" >
+    <input type="hidden" name="_csrf" value="{_csrf}" />
+        <div class="form-group">
+            <label for="">登陆名称<span class="required-indicator">*</span></label>
+            <input type="text" id="userName">{userInfo.name}</input>
+            <label for="">密码<span class="required-indicator">*</span></label>
+            <input type="text" id="userName">{userInfo.password}</input>
+            <label for="">手机号码<span class="required-indicator">*</span></label>
+            <input type="text" id="userName">{userInfo.mobile}</input>
+            <label for="">性别<span class="required-indicator">*</span></label>
+            <input type="text" id="userName">{userInfo.sex}</input>
+            <label for="">地址信息<span class="required-indicator">*</span></label>
+            <input type="text" id="userName">{userInfo.address}</input>
+            <label for="">邮件信息<span class="required-indicator">*</span></label>
+            <input type="text" id="userName">{userInfo.email}</input>
+            <label for="">创建时间<span class="required-indicator">*</span></label>
+            <input type="text" id="userName">{userInfo.createTime}</input>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                    <div class="btn-group">
+                        <a id="returnButton" class="btn btn-default">返回</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>

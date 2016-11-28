@@ -1,9 +1,8 @@
-
 {>"layouts/master" /}
 {<title}{title}{/title}
 {<body}
-   <div >
-       <nav class="navbar navbar-default navbar-fix-top " style="background-color: cadetblue;padding: 20px;">
+   <div style="padding-top: 20px;padding-bottom: 0px">
+       {!<nav class="navbar navbar-default navbar-fix-top " style="background-color: cadetblue;padding: 20px;">
            <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
@@ -22,7 +21,7 @@
                    </ul>
                </div>
            </div>
-       </nav>
+       </nav>!}
         <ul class="nav nav-tabs nav-justified" style="padding-bottom: 0px">
 
             <ul class="nav nav-pills" style="margin-left: 50px">
@@ -136,13 +135,15 @@
 
 {/body}
 
-    <footer   style="background-color: cadetblue" id="footer">
+   <footer   style="background-color: cadetblue" id="footer">
             <div class="container" style="background-color: cadetblue;margin:10px">
                 <p style="color: #ffffff;">Copyright © 2011 中国大地财产保险股份有限公司 All Rights Reserved 版权所有 复制必究!</p>
                 <p style="color: #ffffff;"> ICP许可证号 沪ICP备09091317号-1</p>
             </div>
 
     </footer>
+
+
 
 
 <script type="text/javascript">
