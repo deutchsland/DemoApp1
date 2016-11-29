@@ -1,0 +1,15 @@
+table.gridtable{
+	table-layout: fixed;
+}
+div.gridloading{
+	position:absolute; z-index:888; width:80px; height:22px; line-height:22px; 
+	background:#fff url(../images/loading16x16.gif) no-repeat 5px center; 
+	border:2px solid #cdcdcd; padding-left:26px; 
+	margin-top:10px; _margin-top:-8px; *+margin-top:0px;
+}
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-moz-binding: url('ellipsis.xml#ellipsis');
+}

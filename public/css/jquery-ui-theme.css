@@ -1,0 +1,221 @@
+/*设置Window(Panel)标题的样式(背景图片)*/
+.ui-widget-header {
+	border: 1px solid #CCCCCC; background:url(images/title_bg_1.gif) repeat-x 0 top; color: #005BAC; font-weight: bold;
+}
+
+/*设置Window鼠标未移动到关闭区域时的关闭按钮的图片样式*/
+.ui-widget-header .ui-icon {
+	background-image: url(images/ui-icons_056b93_256x240.png);
+}
+
+/*设置Window鼠标移动到关闭区域时的关闭按钮的图片样式*/
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
+	background-image: url(images/ui-icons_056b93_256x240.png);
+}
+/*设置Window关闭按钮在图片中的位置*/
+.ui-icon-closethick {
+	background-position: -96px -128px;
+}
+
+/*设置Tabs标题的样式(背景图片)*/
+.ui-widget-content {
+	  background: #fff; color: #222222; border:4px solid #4297d7;
+}
+/**设置Window按钮为居中显示 */
+.ui-dialog .ui-dialog-buttonpane { 
+	text-align: center; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; 
+}
+
+/*设置Tabs(Window关闭区域,Outlook)标题的样式(缺省)*/
+.ui-state-default, .ui-widget-content .ui-state-default { background: #fff url(images/ui-bg_glass_45_0078ae_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #000; outline: none; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #295200; text-decoration: none; outline: none; }
+/*设置Tabs(Window关闭区域,Outlook)标题的样式(鼠标移动上去)*/
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { background: #fff url(images/ui-bg_glass_75_79c9ec_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #026890; outline: none; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #295200; text-decoration: none; outline: none; }
+/*设置Tabs(Outlook)标题的样式(激活)*/
+.ui-state-active, .ui-widget-content .ui-state-active {  background: #fff url(images/ui-bg_gloss-wave_50_6eac2c_500x100.png) 50% 50% repeat-x; font-weight: normal; color: #000000; outline: none; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #295200; outline: none; text-decoration: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #fcd113; background: #f8da4e url(images/ui-bg_glass_55_f8da4e_1x400.png) 50% 50% repeat-x; color: #915608; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a { color: #915608; }
+.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #cd0a0a; background: #e14f1c url(images/ui-bg_gloss-wave_45_e14f1c_500x100.png) 50% top repeat-x; color: #000000; }
+.ui-state-error a, .ui-widget-content .ui-state-error a { color: #000000; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text { color: #000000; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+.ui-priority-primary, .ui-widget-content .ui-priority-primary { font-weight: bold; }
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+
+/*设置grid的样式*/
+.newtouch-grid {
+	-moz-border-radius: 2px; -webkit-border-radius: 2px;/*ui-corner-all设置圆角*/
+}
+
+/*设置grid标题(title)的样式*/
+.newtouch-gird-title {
+	border: 1px solid #CCCCCC; background:url(images/title_bg_1.gif) repeat-x 0 top; color: #406100; font-weight: bold;
+
+}
+
+/*设置grid列名称的样式*/
+table.scroll thead th {	
+	
+	color: #333333;
+}
+
+/*设置grid列名称的样式(背景图片)*/
+.newtouch-grid .grid_hdiv {
+	/*border: 1px solid #4297d7; background: #2191c0 url(images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x; color: #eaf5f7; font-weight: bold;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px;/*ui-corner-all设置圆角*/
+}
+
+/*设置grid按钮面板的样式*/
+.newtouch-gird-bar{
+	/*border: 1px solid #4297d7; background: #2191c0 url(images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x; color: #eaf5f7;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px;/*ui-corner-all设置圆角*/
+}
+
+/*设置grid按钮面板中分页的样式*/
+.newtouch-gird-page-bar{
+	/*background: #2191c0 url(images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x; color: #eaf5f7;*/
+}
+
+/*设置portal*/
+.portlet-header { 
+	border: 1px solid #4297d7; background: #2191c0 url(images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x; color: #eaf5f7;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px;/*ui-corner-all设置圆角*/
+}
+
+/*菜单条容器*/
+.ui-menubar{border: 1px solid #4297d7; background: #2191c0 url(images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x; color: #eaf5f7; font-weight: bold;}
+/*菜单条*/
+.rootVoices{background-color:transparent;width:180px;}
+/*菜单条未选中状态*/
+.rootVoices td.rootVoice,.rootVoices td.rootVoice a{color: #000;text-align: center;}
+
+/*菜单条选中状态*/
+.rootVoices td.selected,.rootVoices td.selected a{background-color:#92C060;}
+
+/*菜单条点击以后选中时的状态*/
+.rootVoices td.ui-menu-selected{background-color:#92C060;}
+
+/*菜单阴影*/
+.menuShadow{
+	/*padding:2px;padding-bottom:0px;left:-2;top:1px;*/
+	
+	}
+/*下拉菜单项风格(每条菜单项均为一个table)*/
+.menuContainer{width:80px}
+/*菜单内容行主体风格（即：每个菜单项的背景条风格）*/
+.menuContainer .line{background-color:white;width:100%;padding-left:-5;}
+
+/*菜单内容风格（即菜单的主体文字）*/
+.menuContainer td a{
+	/*text-decoration:none;*/
+	color: #003365;}
+/*非选中时候菜单内容风格*/
+.menuContainer td.voice{
+	/*border-top:1px solid #f3f3f3;font-family:Arial,Helvetica,sans-serif;font-size:12px;padding:5px;*/
+	}
+/*选中状态的样式风格*/
+.menuContainer .selected td{
+	/*background-color:#f3f3f3;background-image:url("../images/bgnd_sel_2.jpg")*/
+	}
+.menuContainer .selected td a{
+	color:#003365;
+	}
+/*禁用的菜单项样式风格*/
+.menuContainer .disabled td, .menuContainer .disabled td a {
+	/*color: #cccccc;*/
+	}
+
+/*菜单项左边图标区风格*/
+.menuContainer td.img{
+	/*border-top:1px solid #f3f3f3;background-color:#f3f3f3;width:24px;padding:5px;*/
+	}
+/*图标风格*/
+.menuContainer td div.ico{
+	/*background-position:center;background-repeat:no-repeat;width:100%;padding:0px;*/
+	}
+
+/*checkbox菜单项checkbox风格*/
+.menuContainer td input.checkbox{
+	/*width:100%;padding:4px;*/
+	}
+
+/*菜单分割条样式*/
+.menuContainer .separator{
+	/*background-color:#f1f1f1;height:1px;*/
+	}
+
+/*含有子菜单的菜单项样式风格*/
+.menuContainer .subMenuOpener{
+	/*background-image:url("../images/menuArrow.gif");background-repeat:no-repeat;background-position:right;*/
+	}
+	
+/*设置Tab标题的样式*/
+.ui-tabs .ui-tabs-nav {
+	background-image:url("images/conntect_title.jpg");
+	border-bottom:2px solid #EE9E01;
+}
+
+/*设置Tab标题li的样式 IE6*/
+*html .ui-tabs .ui-tabs-nav li {
+	background:url("images/tab_02.jpg") top;
+	
+}
+/*设置Tab标题li的样式 IE7*/
+*+html .ui-tabs .ui-tabs-nav li {
+	background:url("images/tab_02.jpg") top;
+	
+}
+/*设置Tab标题li的选中时的样式 IE6*/
+*html .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	background:url("images/tab_01.jpg") top;
+	
+}
+/*设置Tab标题选中时li a的样式 IE7*/
+*+html .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	background:url("images/tab_01.jpg") top;
+	
+}
+/*设置Tab标题li a的样式 IE6*/
+*html .ui-tabs .ui-tabs-nav li a {
+	color:#000000;
+	
+}
+/*设置Tab标题选中时li a的样式 IE7*/
+*+html .ui-tabs .ui-tabs-nav li a {
+	color:#000000;
+	
+}
+/*设置Tab标题选中时li a的样式 IE6*/
+*html .ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+	color:#000000;
+}
+/*设置Tab标题选中时li a的样式 IE7*/
+*+html .ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+	color:#000000;
+}
+
+/*设置Tab标题li的样式 FF*/
+.ui-tabs .ui-tabs-nav li {
+	background-image:url("images/tab_02.jpg");
+}
+
+/*设置Tab标题li的选中时的样式 FF*/
+ .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	background-image:url("images/tab_01.jpg");
+}
+
+/*设置Tab标题li a的样式 FF*/
+.ui-tabs .ui-tabs-nav li a {
+	color:#000000;
+}
+
+/*设置Tab标题选中时li a的样式 FF*/
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+	color:#000000;
+	
+}

@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+/**
+ * @title   CSS Document
+ * @authors Your Name (you@example.org)
+ * @date    2015-03-19 15:36:48
+ * @version Ver 1.0.0
+ */
+body {
+	color: #66696d;
+	width: 760px;
+	margin: 0 auto
+}
+.top_nox {
+	width: 100%;
+	height: 40px;
+
+	position: relative;
+}
+.top_nox span {
+	line-height: 40px;
+	padding-left: 15px;
+	font-size: 16px;
+}
+.top_nox .top_nox_close {
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	position: absolute;
+	top: 11px;
+	right: 15px;
+	z-index: 10
+}
+.content {
+}
+.cont_rows {
+	width: 100%;
+	float: left;
+}
+.cont_rows_box {
+	float: left;
+	width: 44%;
+	margin: 0 3% 15px;
+}
+.rows_box_title {
+	padding: 5px 0 5px 5px;
+	font-size: 16px;
+}
+.calendar_box {
+	width: 100%;
+	background-color: #dfe2e5;
+}
+.contact_memo {
+	width: 100%;
+	overflow: hidden;
+}
+.contact_memo .memo_textarea {
+	width: 322px;
+	height: 144px;
+	border: 1px solid #dfe2e6;
+	padding: 5px;
+}
+.memo_explo {
+	width: 100%;
+	margin-top: 5px;
+	overflow: hidden;
+}
+.memo_explo li {
+	height: 26px;
+	line-height: 26px;
+	font-size: 14px;
+}
+.memo_explo li input[type=radio] {
+	margin-right: 5px;
+}
+.memo_reason {
+	float: right;
+}
+.memo_reason select {
+	margin-left: 8px;
+}
+.fee_choose {
+	width: 100%;
+	overflow: hidden;
+}
+.table_main{
+	width: 334px;
+	border-collapse:collapse;
+	font-size: 14px;
+	border-color: #dfe2e6;
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+}
+.table_main th{
+	font-weight: normal;
+	border:1px solid #dfe2e6;
+	border-collapse:collapse;
+	height: 30px;
+	line-height: 30px;
+}
+.scroll_table{
+	width: 100%; 
+	height: 180px; 
+	overflow-x: hidden; 
+	overflow-y: auto; 
+}
+.table_sub{
+	width: 314px;
+	border:none;
+}
+.table_sub td{
+	border-right:1px solid #dfe2e6;
+}
+.table_sub td p{
+	padding: 5px;
+}
+.table_sub td p input[type=checkbox] {
+	margin-right: 5px;
+}
+.table_sub td p select {
+	max-width: 99px;
+}
+.fee_total {
+	width: 100%;
+	padding: 10px 0;
+	float: left;
+}
+.fee_price {
+	float: left;
+	width: 50%;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 14px;
+}
+.fee_price label {
+	border: 1px solid #dfe2e6;
+	padding: 2px 5px;
+	margin-left: 5px;
+}
+.fee_active {
+	width: 50%;
+	float: left;
+}
+.fee_active a {
+	display: block;
+	width: 70%;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 3px;
+	background-color: #3eabe6;
+	color: #fff;
+	font-size: 14px;
+}

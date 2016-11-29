@@ -1,0 +1,7 @@
+
+.tab_wk4 { border:1px #000 solid; width:100%;  border-collapse:collapse; font-size:12px;margin-bottom:0px;}
+.tab_wk4 tbody tr td{ text-align:left;background:#fff;padding:5px 5px 5px 5px; border:1px #000 solid; }
+.tab_wk4 tbody tr th{ text-align:right; font-weight:normal;background:#fff; width:100px;padding:5px 5px 5px 5px;border:1px #000 solid;}
+.Noprint{display:none;}
+.PageNext{page-break-after: always;} 
+

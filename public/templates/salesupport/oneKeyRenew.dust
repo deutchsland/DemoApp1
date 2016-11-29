@@ -1,0 +1,131 @@
+
+{>"salesupport/sale" /}
+{<oneKeyRenew }
+<div id="nav-info" class="con_right">
+    <table class="offer_table">
+    <span class="right_nav_nor">自助报价</span> ->
+    <span class="right_nav_nor">精确报价</span>
+
+                <th>订单号</th>
+                <td width="35%" id="insuranceOrderNo"></td>
+                <th nowrap="nowrap" width="22%">投保单号</th>
+                <td width="21%" id="proposalNo"></td>
+                <th>期望折扣</th>
+                <td ><input type="text" class="inputW40" id="expectDiscount" name="expectDiscount" maxlength="6" title="“期望折扣”即对商业险折扣的期望值，报价平台返回的折扣会尽量贴近“期望折扣”，但“实际折扣”取两者优惠少的进行保费计算（交强险的折扣直接读取平台返回数据）。格式：0-2之间的整数和小数，小数点后面最多允许4位。例：期望折扣=0.7，平台返回折扣=0.8，则实际折扣=0.8。"/><span id="val_expectDiscount" style="color: red;"></span></td>
+                <tr>
+                    <th>附加意外险</th>
+                    <td id="accidentInsurance"></td>
+                    <th>附加家财险</th>
+                    <td><select id="homeInsurance" name="homeInsurance">
+                        <option value="">尚未开放</option>
+                    </select></td>
+                    <!--xuexu  start-->
+                    <th>随车行李险</th>
+                    <td id="luggageInsurance"></td>
+                </tr>
+                <tr>
+                    <th>附加健康险</th>
+                    <td id="healthInsurance"></td>
+                    <th>总计</th>
+                    <td id="totalFee"></td>
+                    <!--start sungangbin 销管优化需求0511_销售支持_20150602-->
+                    <th>核保方式</th>
+                    <td><select id="UnderWriteType" name="UnderWriteType">
+                        <option value="0" selected='selected'>自动核保</option>
+                        <option value="1">人工核保</option>
+                    </select></td>
+                    <!--end sungangbin 销管优化需求0511_销售支持_20150602-->
+                </tr>
+                <!--start sungangbin 销管优化需求0511_销售支持-->
+                <tr>
+                    <!--start sungangbin 关于报价次数提示功能的需求_20150629-->
+                    <th>查询次数</th>
+                    <td id="queryTimes"></td>
+                    <!--end sungangbin 关于报价次数提示功能的需求_20150629-->
+                </tr>
+                <!--end sungangbin 销管优化需求0511_销售支持-->
+                <tr>
+                    <th nowrap="nowrap">业务风险分类</th>
+                    <td colspan="4"><select id="handler2Code" name="handler2Code">
+                        <option value="">请选择&nbsp;&nbsp;</option>
+                    </select></td>
+                    <td >
+                        &nbsp;<input type="button" class="btn_sea" id="agentInfoQuery" value="查询"/><input type="button" id="readICCardInfo" value="&nbsp;获取中介IC卡内容&nbsp;" onclick="readICCardInfo();" style="display: none"/></td>
+                </tr>
+                <tr id="policyRenewalTable" style="display: none;">
+                    <th width="11%">续保保单号</th>
+                    <td width="22%" id="policyRenewal"></td>
+                    <th width="12%"></th>
+                    <td width="21%"></td>
+                    <th width="12%"></th>
+                    <td ></td>
+                </tr>
+                {!<tr style="display: none;">
+                    <td><input type="hidden" id="policyNo" value="${param.policyNo}" /></td>
+                    <td><input type="hidden" id="userId" value="${param.userId}" /></td>
+                    <td><input type="hidden" id="custLevel" value="${param.custLevel}" /></td>
+                    <td><input type="hidden" id="startDateTemp" value="${view.startDateTemp}"/></td>
+                    <td><input type="hidden" id="insuranceOrderNoJump" value="${param.insuranceOrderNoJump}" /></td>
+                    <td><input type="hidden" id="applicationIdJump" value="${param.applicationId}" /></td>
+                    <td><input type="hidden" id="jumpType" value="${param.jumpType}" /></td>
+                    <td><input type="hidden" id="insuranceOrderNoMd5" value="${param.insuranceOrderNoMd5}" /></td>
+                    <td><input type="hidden" id="userCode" /></td>
+                    <td><input type="hidden" id="comCode" /></td>
+                    <td><input type="hidden" id="handlerCode" /></td>
+                    <td><input type="hidden" id="verifyAnswer" /></td>
+                    <td><input type="hidden" id="verifyType" /></td>
+                    <td><input type="hidden" id="companyCode" value="${view.companyCode}" /></td>
+                    <td><input type="hidden" id="applicationId"/></td>
+                    <td><input type="hidden" id="applicationId_DDH"/></td>
+                    <td><input type="hidden" id="applicationId_DDK"/></td>
+                    <td><input type="hidden" id="insuranceAppId"/></td>
+                    <td><input id="totalFeeHidden" type="hidden" value=""/></td>
+                    <td><input id="premium_DDH" type="hidden" value=""/></td>
+                    <td><input id="premium_DDK" type="hidden" value=""/></td>
+                    <td><input id="totalFeeHidden_DDH" type="hidden" value=""/></td>
+                    <td><input id="totalFeeHidden_DDK" type="hidden" value=""/></td>
+                    <td><input id="biKindPremiumHidden_DDH" type="hidden" value=""/></td>
+                    <td><input id="biKindPremiumHidden_DDK" type="hidden" value=""/></td>
+                    <td>
+                        <!--客户等级信息模块  start-->
+                        <input id="clsLevelHid" type="hidden" value=""/>
+                        <input id="calculateHid" type="hidden" value=""/>
+                        <input id="renewalYearsHid" type="hidden" value=""/>
+                        <input id="custNoHid" type="hidden" value=""/>
+                        <input id="C001Hid" type="hidden" value=""/>
+                        <input id="C002Hid" type="hidden" value=""/>
+                        <input id="C003Hid" type="hidden" value=""/>
+                        <input id="C004Hid" type="hidden" value=""/>
+                        <input id="C005Hid" type="hidden" value=""/>
+                        <input id="C006Hid" type="hidden" value=""/>
+                        <input id="C007Hid" type="hidden" value=""/>
+                        <input id="C008Hid" type="hidden" value=""/>
+                        <input id="C009Hid" type="hidden" value=""/>
+                        <input id="C010Hid" type="hidden" value=""/>
+                        <input id="C011Hid" type="hidden" value=""/>
+                        <input id="C012Hid" type="hidden" value=""/>
+                        <input id="C013Hid" type="hidden" value=""/>
+                        <input id="applicantNameHid" type="hidden" value=""/>
+                        <input id="appCertificateTypeHid" type="hidden" value=""/>
+                        <input id="appCertificateNumHid" type="hidden" value=""/>
+                        <input id="insuredNameHid" type="hidden" value=""/>
+                        <input id="insCertificateTypeHid" type="hidden" value=""/>
+                        <input id="insCertificateNumHid" type="hidden" value=""/>
+                        <input id="relationShipHid" type="hidden" value=""/>
+                        <input id="repeatCalculat" type="hidden"  value=""/>
+                        <!--lianhexiaoshou  start-->
+                        <input id="companyComCode" type="hidden"  value="${view.companyComCode}"/>
+                        <!--xuexu  start-->
+                        <input id="accurateMark" type="hidden" value="1"/>
+                        <!--xuexu  End-->
+                        <input type="hidden" id="riskCodeType" value="${view.riskCodeType}"/><!--商车改革DBY-"DDH"-->
+                        <input type="hidden" id="riskCodeType2" value="${view.riskCodeType2}"/><!--商车改革DBY-"DDK"-->
+                        <input id="accurateNewMark" type="hidden" value="1"/>
+                        <input id="comcode2" type="hidden" value="${view.comcode2}"/>
+                        <input id="isCarReformHidden" type="hidden" value="${view.isCarReform}"/>
+                    </td>
+                </tr>!}
+
+    </table>
+</div>
+{/oneKeyRenew}

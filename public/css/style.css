@@ -21,7 +21,17 @@ UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
     width:200px;
 }
 
-
+.con_right {
+    width: 767px;
+    float: left;
+    margin-left: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width:88%;
+}
+.right_nav_nor {
+    font-size: 9px;
+}
 
 #navbar-collapse ul {
 	margin-top: 0;

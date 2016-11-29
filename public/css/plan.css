@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*---------------- 中间版块 ----------------*/
+.cen_main {float:left; width:100%; margin-top:10px; margin-left:2px;}
+
+.cen_bg {background:url(../images/plan/cen_cen.gif) repeat-y;}
+.cen_bg1 {background:url(../images/plan/cen_top.gif) no-repeat; height:15px;}
+.cen_bg2 {background:url(../images/plan/cen_bot.gif) bottom no-repeat; padding:0 18px 18px 18px;}
+.cen_con{background-color:#FFF; text-align:center; padding-left:5px; padding-right:5px; height:500px;}
+
+.bar_c{ background:url(../images/plan/bar_c.gif);}
+.bar_common{height:36px; text-align:left; padding-left:35px; padding-top:4px;}
+.bar_1_on{ background:url(../images/plan/bar_1_on.gif); color:#379338; width:123px; padding-left:50px;}
+.bar_1_off{ background:url(../images/plan/bar_1_off.gif); color:#666; width:123px; padding-left:50px;}
+.bar_1_off1{ background:url(../images/plan/bar_1_off1.gif); color:#666; width:123px; padding-left:50px;}
+.bar_2_on{ background:url(../images/plan/bar_2_on.gif); color:#379338; width:124px;}
+.bar_2_off{ background:url(../images/plan/bar_2_off.gif); color:#666; width:124px;}
+.bar_2_off1{ background:url(../images/plan/bar_2_off1.gif); color:#666; width:124px;}
+.bar_3_on{ background:url(../images/plan/bar_3_on.gif); color:#379338; width:124px;}
+.bar_3_off{ background:url(../images/plan/bar_3_off.gif); color:#666; width:124px;}
+
+.operate_btn{border:1px #aaa solid; background:#f5f5f5; color:#434343; }

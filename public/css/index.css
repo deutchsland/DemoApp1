@@ -1,0 +1,82 @@
+body ,p{ margin:0 ; padding:0 ; font-size:14px}
+a{text-decoration:none }
+a:focus { outline: 0; }
+.content_index{ width:1000px ; margin:auto}
+.contentall_index{ width:100% ; margin:auto}
+.navigator{/*当然，宽度可以你自己定义*/
+width: 100%;
+margin: 0;
+}
+.navigator ul{/*这里必须设置内边距和外边距，因为浏览器会自动给ul设定值，会把导航栏挤歪*/
+padding: 0;
+margin: 0;
+list-style-type: none;
+margin-top:20px;
+}
+.navigator li{/*本来ul是竖直排列的，对所有li元素进行float:left他就会自动全部靠左*/
+float: left;
+position :relative;
+}
+.navigator ul li a,.navigator ul li a:visited {/*这里设置text-decoration是为了防止a标签自己的样式*/
+display: block;
+text-align: center;
+text-decoration: none;/*不对文本设置效果 */
+width: 109px;/*每一块的宽度*/
+height: 30px;/*每一块的高度*/
+color: black;/*文字颜色 */
+line-height: 30px;/*这是一个技巧，这里将height和line-height设置为一样的高度文字就会水平竖直居中 */
+font-size: 15px;
+background:#f6f6f6;
+border-width: 1px 1px 0 0;
+border: 1px solid #fff
+}
+.navigator ul li:hover a {/*这是一个css伪类，将鼠标移上去的时候字体和背景都会变色，移开又会变回来 */
+color: #ff0000;
+}
+.navigator ul li ul {/*这里是为了将导航栏里的内容隐藏*/
+display: none;
+}
+.navigator ul li:hover ul {/*这里就是弹出的下拉菜单了*/
+display: block;
+position: absolute;
+top: 11px;
+left: 0;
+width: 100px;
+
+}
+.navigator ul li:hover ul li a {/*这里当然是定义下拉菜单里的a标签了*/
+height:30px;
+line-height:30px;
+display: block;
+color: #000;
+background:#f6f6f6;
+
+}
+.navigator ul li:hover ul li a:hover {/*这个是伪类，上面有说*/
+color: #ff0000;
+} /* CSS Document */
+
+.banner_index{ width:100% ; height:380px ; background:#1a54b7 ; margin-top:15px}
+
+.sidebar_index{ width:200px ; float:left ; margin-right:20px}
+.sidebar_index_img{border-radius:10px ; border:2px solid #e2e2e2 ; height:65px ; width:198px ; margin-bottom:23px}
+.sidebar_index_img img{ margin-top:4px ; margin-left:10px}
+
+.column_index{ width:230px ; float:left ; height:250 ; border-radius:10px ; border:2px solid #e2e2e2 ; margin-right:25px}
+.column_index_span{font-size:18px ; color:#555c64 ; line-height:30px ; float:left ; margin-left:8px}
+.column_index_header_img{ float:left}
+.column_index_header{ height:30px ; ; margin-top:10px ; margin-left:10px}
+.column_index_header_z{ height:28px ; border-radius:4px ; float:right ; width:28px ; border:1px solid #dedede ; color:#c2c0c1 ; font-size: 16px; line-height:28px ; text-align:center ; margin-right:10px}
+.column_index_header_f{ height:28px ; border-radius:4px ; float:right ; width:28px ; border:1px solid #dedede ; color:#f6c310 ; font-size: 16px; line-height:28px ; text-align:center ; margin-right:10px}
+
+.column_index_index{ margin-top:5px}
+.column_index_index ul{ margin:0 ; padding:0 ; height:180px}
+.column_index_index ul li{list-style-type:none ; height:35px ; line-height:35px ; border-bottom:1px solid #ededed ; margin-left:5px ; margin-right:5px ;}
+.column_index_index ul li a{ color:#2872c7 ; width:100% ; float:left}
+.column_index_footer{ color:#6c7279 ; float:right ; margin-right:10px}
+
+
+
+
+.footer_index{ background:#e7e7e9 ; width:100% ; height:75px }
+.footer_index p{ text-align:center}
