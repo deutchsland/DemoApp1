@@ -17,7 +17,7 @@
 	        <div class="sidebar" id="sidebar">
         	<ul class="nav nav-list" id="ulMenu">
 				<li>
-					<a href="/mss/index.jsp"  id="DropBM1" >
+					<a href="/admin/admin"  id="DropBM1" >
 					<i class="icon-sy"></i>
 					<span class="menu-text">首页</span>
 					</a>
@@ -122,7 +122,7 @@
 
 		                     	 <input type="hidden" id="menuId" name="menuId" value="1484"/>
 		                     	 <li>
-				                 	<a href="javascript:void(0);"  id="m2-1484" name="/view/vehicleInsurance/accurateQuotation/accurateQuotationForAgencyBusiness.jsp" onclick="">
+				                 	<a href="/sale/sale/support"  id="m2-1484" name="/view/vehicleInsurance/accurateQuotation/accurateQuotationForAgencyBusiness.jsp" onclick="">
 				                 	<i class="icon-double-angle-right"></i>
 				                 	精确报价</a>
 				              	 </li>
