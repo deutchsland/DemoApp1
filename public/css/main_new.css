@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 /* CSS Document */
 /*---------------- body ----------------*/
-*,body,div,p,table,td,input,option,textarea,select{color:#000; font-size:12px; margin:0px; padding:0; font-family:'宋体';}
+*,body,div,p,table,td,input,option,textarea,select{color:#000;  margin:0px; padding-left:0; font-family:'宋体'; }
 body,form,ul,li,p,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6{margin:0;padding:0}
 body{background-color:#FFFFFF;}
 img{border:0;}
@@ -216,7 +216,7 @@ a.link_right:hover{text-decoration:none;}
 
 
 /*con right*/
-.right_nav {height:45px; padding-top:18px; padding-left:12px; margin-bottom:8px; background:url(../../img/bg_right_nav.png) no-repeat;}
+.right_nav {height:45px; padding-top:30px; padding-left:12px; margin-bottom:8px; margin-top:20px;background:url(../../img/bg_right_nav.png) no-repeat;}
 .right_nav span {background:url(../../img/icon_nav.gif) no-repeat left center; padding-left:13px; color:#0f6daa; font-weight:normal; margin-right:8px;}
 .right_nav .right_nav_nor {background:none; padding-left:0;}
 
@@ -503,3 +503,10 @@ a.link_right:hover{text-decoration:none;}
 
 /*--------------样式透明度的变化--------------*/
 .opacity_bg{opacity:0.2;}
+
+/*Tab字体样式变化*/
+.fontTab {
+    padding-left: 10px;
+    word-spacing: 5px;
+    font-size: 10px;
+}
