@@ -1,0 +1,111 @@
+<form class="form-horizontal"  method="post" id="partyForm"   role="form">
+    <div class="form-group">
+        <label for="partyName"  class="col-sm-1 control-label" style="width:86px"><span class="required-indicator">*</span>号牌号码</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control"  id="partyName" name="party[name]" value="{item.name}" required />
+
+        </div>
+        <label for="partyCode"  class="col-sm-2 control-label">号牌类型</label>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="partyCode" name="party[code]" value="{item.code}"  onkeyup="value=value.replace(/[\W]/g,'')"
+                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" placeholder="仅限字母+数字" required />
+        </div>
+        <label for="partyUrl"  class="col-sm-1 control-label" style="width: 100px"><span class="required-indicator">*</span>车架号</label>
+        <div class="col-sm-2">
+        <input type="text" class="form-control" id="partyCode" name="party[code]" value="{item.code}"  onkeyup="value=value.replace(/[\W]/g,'')"
+               onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" placeholder="仅限字母+数字" required />
+       {! <div class="col-sm-2">
+            !}{!{@baseCode id="businessMode" class="form-control" name="party[businessMode]" base="businessMode" selectValue="{item.businessMode}"  required="true" /}!}{!
+        </div>!}
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <label for="partyBranch"  class="col-sm-1 control-label" style="width:86px"><span class="required-indicator">*</span>发动机号</label>
+        <div class="col-sm-3">
+            <input type="text"  class="form-control" id="partyBranch"  name="party[branch]" value="{item.branch}" onkeyup="value=value.replace(/[\W]/g,'')"
+                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" placeholder="仅限字母+数字" required/>
+        </div>
+        <label for="partyAgent" class="col-sm-2 control-label"><span class="required-indicator">*</span>初次登记日期</label>
+        <div class="col-sm-2">
+            <input id="enrollDate"  class="date form_datetime" name="enrollDate" class="required"  type="text" value=""  readonly/>
+        </div>
+        <label for="partyOutsystem"  class="col-sm-1 control-label" style="width: 100px" >首年投保日期</label>
+        <div class="col-sm-2">
+            <input id="enrollDate"  class="date form_datetime" name="enrollDate" class="required"  type="text" value=""  readonly/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-sm-1 control-label" style="width: 96px;" >车型代码</label>
+        <div class="col-sm-5">
+            <input type="text"  class="form-control" id="partyToken" name="party[token]" value="{item.token}" readonly>
+        </div>
+        {!<div class="col-sm-3">
+            <table cellpadding="0" cellspacing="0" style="margin-left: -6px;">
+                <tr>
+                    <td> <input id="startDate" class="form-control date datepicker" size="13" name="party[effectiveStartDate]" type="text"   value="{item.effectiveStartDate}" onfocus="settings()" required></td>
+                    <td>至</td>
+                    <td> <input id="endDate" class="form-control date datepicker" size="13" class="form-control" size="16" name="party[effectiveEndDate]" type="text"  onfocus="settings()" onchange="validJudge()" value="{item.effectiveEndDate}"  required></td>
+                </tr>
+            </table>
+        </div>!}
+
+
+        <label for="partyToken"  class="col-sm-1 control-label" style="width:156px"><span class="required-indicator">*</span>车辆型号</label>
+        <div class="col-sm-5">
+            <input type="text"  class="form-control" id="partyToken" name="party[token]" value="{item.token}" >
+        </div>
+
+
+        <label for="partyToken"  class="col-sm-1 control-label" style="width:156px"><span class="required-indicator">*</span>新车购置价</label>
+        <div class="col-sm-5">
+            <input type="text"  class="form-control" id="partyToken" name="party[token]" value="{item.token}" >
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <label for="partyBranch"  class="col-sm-1 control-label" style="width:86px">车辆实际价值</label>
+        <div class="col-sm-3">
+            <input type="text"  class="form-control" id="partyBranch"  name="party[branch]" value="{item.branch}" onkeyup="value=value.replace(/[\W]/g,'')"
+                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" placeholder="仅限字母+数字" readonly/>
+        </div>
+        <label for="partyAgent" class="col-sm-2 control-label">车辆种类</label>
+        <div class="col-sm-2">
+            <select id="enrollDate"  class="date form_datetime" name="enrollDate" class="required"></select>
+        </div>
+        <label for="partyOutsystem"  class="col-sm-1 control-label" style="width: 100px" >核定载客</label>
+        <div class="col-sm-2">
+            <input id="enrollDate"  class="date form_datetime" name="enrollDate" class="required"  type="text" value=""  required/>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="form-group">
+        <label for="partyUrl" style="width:86px" class="col-sm-1 control-label">核定载质量<span class="required-indicator">*</span></label>
+        <div class="col-sm-3">
+            <input type="text" style="width:230px"  class="form-control" id="partyUrl" name="party[url]"
+                   value="{item.url}" title="第三方连接地址如 携程网 http://www.ctrip.com" data-toggle="tooltip" required/>
+        </div>
+
+        <label for="partyDescript"  class="col-sm-1 control-label" style="width:162px">行驶里程</label>
+        <div class="col-sm-6">
+            <input type="text" style="width:230px"  class="form-control" id="partyUrl" name="party[url]"
+                   value="{item.url}" title="第三方连接地址如 携程网 http://www.ctrip.com" data-toggle="tooltip" required/>
+        </div>
+
+        <label for="partyDescript"  class="col-sm-1 control-label" style="width:162px">行驶证车主</label>
+        <div class="col-sm-6">
+            <input type="text" style="width:230px"  class="form-control" id="partyUrl" name="party[url]"
+                   value="{item.url}" title="第三方连接地址如 携程网 http://www.ctrip.com" data-toggle="tooltip" required/>
+        </div>
+    </div>
+</form>

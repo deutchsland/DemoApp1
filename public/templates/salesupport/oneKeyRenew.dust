@@ -167,7 +167,26 @@
 
     </table>
 
+    <div class="panel panel-primary" id="test">
+        <div class="panel-group">
+            <div class="panel-default">
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <button class="btn btn-primary" id="searchBtn" type="button">查&nbsp;&nbsp;&nbsp;&nbsp;询</button>&nbsp;&nbsp;
+                            <a href="" id="template" hidden="true"></a>
 
+                            <a class="btn btn-primary" id="resetBtn">重置</a>&nbsp;&nbsp;
+
+                                <button class="btn btn-primary" id="addNewBtn" href="#" data-toggle="modal" data-target="#addModel" type="button">增加接口</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <!-- modal
     <h2>创建模态框（Modal）</h2>-->
     <!-- 按钮触发模态框
@@ -186,18 +205,18 @@
                         保单投保
                     </h4>
                 </div>
-                <div class="modal-body">
-                    <table class="tab_wk" id="css7">
+                <div class="modal-body" id="formDiv">
+                    {!<table class="tab_wk" id="css7">
                         <tbody>
                         <tr>
                             <th id="normal_th2"><span ><b class="ftx04" style="color:red">*</b></span >号牌号码</th>
                             <td id="normal_td3">
-                                {!<c:if test="${view.insuranceApplication.vehicle.noLicenseFlag=='1'}">
+                                !}{!<c:if test="${view.insuranceApplication.vehicle.noLicenseFlag=='1'}">
                                     <input type="text" name="licenseNo" id="licenseNo" onblur="fun(this)" style="width:140px;" value="${view.insuranceApplication.vehicle.licenseNo}" ></input>
-                                </c:if>!}
-                                {!<c:if test="${view.insuranceApplication.vehicle.noLicenseFlag!='1'}">!}
+                                </c:if>!}{!
+                                !}{!<c:if test="${view.insuranceApplication.vehicle.noLicenseFlag!='1'}">!}{!
                                     <input type="text" name="licenseNo" id="licenseNo" maxlength="7"  class="required" style="width:140px;" value="${view.insuranceApplication.vehicle.licenseNo}" ></input>
-                                {!</c:if>!}
+                                !}{!</c:if>!}{!
                                 &nbsp;&nbsp;
                                 <input id="noLicenseFlag" type="checkbox" style="vertical-align:baseline;" onclick="checkNewCar();"></input> 新车未上牌 &nbsp;&nbsp;
                                 <input type="button" id="configType" name="configType" value="扫描条码" onclick="scanTwoDimensionalCode()"/>
@@ -205,9 +224,9 @@
                             <th id="normal_th2">号牌类型</th>
                             <td id="normal_td3">
                                 <select id="licenseType" name="licenseType" class="required select_w120">
-                                    {!<c:forEach items="${view.licenseTypeList}" var="licenseType">
+                                    !}{!<c:forEach items="${view.licenseTypeList}" var="licenseType">
                                         <option <c:if test="${licenseType.code == view.insuranceApplication.vehicle.licenseType}">selected="selected"</c:if>  value="${licenseType.code}">${licenseType.name}</option>
-                                    </c:forEach>!}
+                                    </c:forEach>!}{!
                                 </select>
                             </td>
                         </tr>
@@ -225,9 +244,9 @@
                             <th id="normal_th2"><span ><b class="ftx04" style="color:red">*</b></span>初次登记日期 </th>
                             <td id="normal_td2">
                                 <input id="enrollDate"  class="date form_datetime" name="enrollDate" class="required"  type="text" value=""  readonly/>
-                                {!<c:if test="${view.comeCode=='3101'||view.comeCode=='3109'}">!}
+                                !}{!<c:if test="${view.comeCode=='3101'||view.comeCode=='3109'}">!}{!
 
-                                {!</c:if>!}
+                                !}{!</c:if>!}{!
                             </td>
                             <th id="normal_th2">车型代码</th>
                             <td id="normal_td3">
@@ -279,12 +298,12 @@
 
                         </tbody>
                         <tr>
-                    </table>
+                    </table>!}
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭
                     </button>
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" id="submitBtnForProposal" class="btn btn-primary">
                         提交更改
                     </button>
                 </div>
@@ -310,6 +329,11 @@
 
         <!--xuexu End-->
     </h3>
+
+    <div>
+        {>detailForProposal /}
+    </div>
+
 
 
 
@@ -357,6 +381,36 @@
 
     });*/
     $(function(){
+
+
+        $("#submitBtnForProposal").click(function(){
+            $("#partyForm").submit();
+        });
+
+        $('#1span').click(function(){
+            dust.render(function(){
+
+            })
+        });
+        /*$("#addNewBtn").click(function() {
+            var formData = {};
+            dust.render('interface._form', formData, function(err, out) {
+                $("#formDiv").html(out);
+                $("#actionDiv").hide();
+                $('#myModalLabel').text('增加接口');
+                $("#interfaceForm").validate({
+                    submitHandler: function(form) {
+                        $(":button").attr("disabled", "true");
+                        submitForm(form, '/interface/new', function(data){
+                            $('.modal').modal('hide');
+                            $('.modal-backdrop').remove();
+                        });
+                    },
+                    focusCleanup: true
+                });
+            });
+        });*/
+
 
         $("#1span").hover(function(){
                 //alert("sd");
