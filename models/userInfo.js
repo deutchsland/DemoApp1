@@ -56,6 +56,6 @@ var userInfoSchema = new mongoose.Schema({
     })
 module.exports = mongoose.model('UserInfo',userInfoSchema);
 
-mongoose.connect( 'mongodb://localhost/Ecommer' );
+//mongoose.connect( 'mongodb://localhost/Ecommer' );
 
 
