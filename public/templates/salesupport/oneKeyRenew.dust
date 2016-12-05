@@ -283,11 +283,12 @@
 </div>
 {/oneKeyRenew}
 {!<script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>!}
-<script type="text/javascript" src="../../dust-core-2.0.3.js"></script>
-<script type="text/javascript" src="/js/jquery.validate.js"></script>
-<script type="text/javascript" src="/js/templates/salesupport/oneKeyRenew.js"></script>
-<script type="text/javascript" src="/js/templates/salesupport/_form.js"></script>
-<script type="text/javascript" src="/js/templates/salesupport/detail.js"></script>
+
+<script type="text/javascript" src="../../dust-core-2.0.3.js"></script>{!../../代表相对路径，指public目录下  !}
+<script type="text/javascript" src="../../js/jquery.validate.js"></script>
+<script type="text/javascript" src="../../js/templates/salesupport/oneKeyRenew.js"></script>
+<script type="text/javascript" src="../../js/templates/salesupport/form.js"></script>
+<script type="text/javascript" src="../../js/templates/salesupport/detail.js"></script>
 <script type="text/javascript">
     /*$("h3 #1spanC").click(function(){
 
@@ -305,13 +306,14 @@
         $('#1span').click(function(){
             var formDate = {};
             var item = {};
-            var startDate = new Date();
+            //var startDate = n ew Date();
             item.enrollDate = "2016-12-2";
             item.startProposalDate = "2099-12-31";
             formDate.item = item;
            // console.log("out ");
-            dust.render("detail", formDate, function(err, out) {
+            dust.render("salesupport.form",formDate , function(err, out) {
                 console.log("out "+out);
+                $("#formDiv").html("<h1>"+"welcome"+"</h1>");
                 $("#formDiv").html(out);
                 $("#partyForm").validate({
                     submitHandler: function(form) {
@@ -354,7 +356,7 @@
             //MenuTab(1);
         });*/
 
-        $("#1span").hover(function(){
+       /* $("#1span").hover(function(){
             //alert("sd");
             $(this).removeClass("right_tab_cur").addClass("right_tab_cur");
             $("#divShow1").css({display:"block"});
@@ -362,10 +364,18 @@
         },function(){
             $(this).removeClass("right_tab_cur");
            // $("#divShow1").css({display:"none"});
-        });
+        });*/
+
+        hoverShow("#divShow1","#1span");
+        hoverShow("#divShow2","#2span");
+        hoverShow("#divShow3","#3span");
+        hoverShow("#divShow4","#4span");
+        hoverShow("#divShow5","#5span");
+        hoverShow("#divShow6","#6span");
+        hoverShow("#divShow7","#7span");
 
 
-        $("#2span").hover(function(){
+       /* $("#2span").hover(function(){
             //alert("sd");
             $(this).removeClass("right_tab_cur").addClass("right_tab_cur");
             $("#divShow2").css({display:"block"});
@@ -423,13 +433,15 @@
         },function(){
             $(this).removeClass("right_tab_cur");
             $("#divShow7").css({display:"none"});
-        });
+        });*/
         $(".form_datetime").datetimepicker({
             format: "yyyy-mm-dd hh:mm:ss",
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
         });
+
+
 
        /* var datetimepickerOptions = {
             format: 'yyyy-mm-dd hh:mm:ss',
@@ -447,7 +459,18 @@
         $('#invoiceDate').datetimepicker(datetimepickerOptions);*/
 
 
-    })
+    });
+    var hoverShow = function(divname,selector){
+        $(selector).hover(function(){
+            $(this).removeClass("right_tab_cur").addClass("right_tab_cur");
+            $(divname).css({display:"block"});
+        },function(){
+            $(this).removeClass("right_tab_cur");
+           // $(divname).css({display:"none"});
+        });
+
+    }
+
     /*function MenuTab(tabNum){
 
         var arrayMenu = ["1span","2span","3span","4span","5span","6span"];

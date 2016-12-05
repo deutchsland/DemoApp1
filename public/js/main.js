@@ -263,3 +263,125 @@ var app = {
         bootbox.alert(some_html);
     }
 };
+
+requirejs.config({
+    "waitSeconds": 10,
+    "urlArgs": "bust=" + (new Date()).getTime(),
+    "path": {
+        "jquery": "jquery.min.js",
+        "ace.min": "ace.min.js",
+        "ace-elements": "ace-elements.min.js",
+        "ace-extra": "ace-extra.min.js",
+        "bootstrap": "bootstrap.js",
+        "bootstrap.min": "bootstrap.min.js",
+        "bootstrap.datetimepicker": "bootstrap-datetimepicker.js",
+        "bootstrap.datetimepicker.min": "bootstrap-datetimepicker.min.js",
+        "bootstrap.datetimepicker.uk": "bootstrap-datetimepicker.uk.js",
+        "bootstrap.datetimepicker.CN": "bootstrap-datetimepicker.zh-CN.js",
+        "bootstrap.datetimepicker.TW": "bootstrap-datetimepicker.zh-TW.js",
+        "bootstrap.tag.min": "bootstrap-tag.min.js",
+        "bootstrap.wysiwyg": "bootstrap-wysiwyg.min.js",
+        "dust": "/components/dustjs-linkedin/dist/dust-core.min",
+        "dustHelper": "/components/dustjs-linkedin-helpers/dist/dust-helpers.min",
+        "jquery.hotkeys": "jquery.hotkeys.min.js",
+        "jquery.mobile.custom.min": "jquery.mobile.custom.min.js",
+        "jquery.slimscroll.min": "jquery.slimscroll.min.js",
+        "jquery.ui.touch-punch.min": "jquery.ui.touch-punch.min.js",
+        "jquery.validate": "jquery.validate.js",
+        "jquery.validate.min": "jquery.validate.min.js",
+        "bootbox.min": "bootbox.min.js",
+        "typeahead-bs2.min": "typeahead-bs2.min.js",
+
+        "admin.products": "templates/admin/products",
+        "layouts.master": "templates/layouts/master",
+        "salesupport.detail": "templates/salesupport/detail",
+        "salesupport.form": "templates/salesupport/form",
+        "salesupport.oneKeyRenew": "templates/salesupport/oneKeyRenew",
+        "salesupport.sale": "templates/salesupport/sale",
+        "system.user.add": "templates/user/add",
+        "system.user._form": "templates/user/_form"
+
+    },
+    "shim": {
+        "bootstrap": {
+            "deps": ["jquery"]
+        },
+        "dustHelper": {
+            "deps": ["dust"]
+        },
+        'jquery.validate': {
+            "deps": ["jquery"]
+        },
+        'bootstrap.datetimepicker.CN': {
+                "deps": ["jquery", "bootstrap.datetimepicker"]
+        },
+        'bootstrap.datetimepicker':{
+                "deps": ["bootstrap.min"]
+        },
+
+        "admin.products": {
+            "deps": ["dust", "dustHelper"]
+        },
+        "layouts.master": {
+            "deps": ["dust", "dustHelper"]
+        },
+        "salesupport.detail": {
+            "deps": ["dust", "dustHelper"]
+        },
+        "salesupport.form": {
+            "deps": ["dust", "dustHelper"]
+        },
+        "salesupport.oneKeyRenew": {
+            "deps": ["dust", "dustHelper"]
+        },
+        "salesupport.sale": {
+            "deps": ["dust", "dustHelper"]
+        },
+        "system.user.add": {
+            "deps": ["dust", "dustHelper"]
+        },
+        "system.user._form": {
+            "deps": ["dust", "dustHelper"]
+        }
+    }
+});
+
+requirejs([
+    "jquery",
+    "ace.min",
+    "ace-elements",
+    "ace-extra",
+    "bootstrap",
+    "bootstrap.min",
+    "bootstrap.datetimepicker",
+    "bootstrap.datetimepicker.min",
+    "bootstrap.datetimepicker.uk",
+    "bootstrap.datetimepicker.CN",
+    "bootstrap.datetimepicker.TW",
+    "bootstrap.tag.min",
+    "bootstrap.wysiwyg",
+    "dust",
+    "dustHelper",
+    "jquery.hotkeys",
+    "jquery.mobile.custom.min",
+    "jquery.slimscroll.min",
+    "jquery.ui.touch-punch.min",
+    "jquery.validate",
+    "jquery.validate.min",
+    "bootbox.min",
+    "typeahead-bs2.min",
+
+    "admin.products",
+    "layouts.master",
+    "salesupport.detail",
+    "salesupport.form",
+    "salesupport.oneKeyRenew",
+    "salesupport.sale",
+    "system.user.add",
+    "system.user._form"
+
+
+],function($, bt, as){
+    app.init($, bt, as);
+    app.user = user;
+})

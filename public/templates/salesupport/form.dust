@@ -1,9 +1,8 @@
-<form class="form-horizontal"  method="post" id="partyForm"   role="form">
+<form class="form-horizontal"  method="post" id="partyForm"   >
     <div class="form-group">
         <label for="tokenNo"  class="col-sm-1 control-label" style="width:86px"><span class="required-indicator">*</span>号牌号码</label>
         <div class="col-sm-3">
             <input type="text" class="form-control"  id="tokenNo" name="proposal[tokenNo]" value="{item.tokenNo}" required/>
-
         </div>
         <label for="tokenType"  class="col-sm-2 control-label">号牌类型</label>
         <div class="col-sm-2">
@@ -85,7 +84,6 @@
         <div class="col-sm-2">
             <input id="customerNo"  class="date form_datetime" name="proposal[customerNo]" class="required"  type="text" value=""  required/>
         </div>
-
     </div>
 
 

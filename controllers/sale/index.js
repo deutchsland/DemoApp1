@@ -22,10 +22,11 @@ module.exports = function (router) {
     router.post('/proposal',function(req,res){
             var proposalInfo  = req.body.proposal;
             var proposalModel = new Proposal(proposalInfo);
-            proposalModel.save(function(err,res,next){
+            proposalModel.save(function(err){
                 var model = {};
                 if(err){
-                    return err;
+                    model.err = err;
+                    return res.json(model);
                 }
                 Proposal.paginate({},page,10,function(err,pageCount,items){
                     if(err){
