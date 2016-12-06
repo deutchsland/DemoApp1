@@ -209,9 +209,9 @@ var app = {
         $(function() {
             bootbox = bt;
             async = as;
-            bootbox.setDefaults({
+           /* bootbox.setDefaults({
                 locale: "zh_CN"
-            });
+            });*/
             async.series([
                 function(callback) {
                     baseCode.getBaseData(function() {
@@ -267,62 +267,86 @@ var app = {
 requirejs.config({
     "waitSeconds": 10,
     "urlArgs": "bust=" + (new Date()).getTime(),
-    "path": {
-        "jquery": "jquery.min.js",
-        "ace.min": "ace.min.js",
-        "ace-elements": "ace-elements.min.js",
-        "ace-extra": "ace-extra.min.js",
-        "bootstrap": "bootstrap.js",
-        "bootstrap.min": "bootstrap.min.js",
-        "bootstrap.datetimepicker": "bootstrap-datetimepicker.js",
-        "bootstrap.datetimepicker.min": "bootstrap-datetimepicker.min.js",
-        "bootstrap.datetimepicker.uk": "bootstrap-datetimepicker.uk.js",
-        "bootstrap.datetimepicker.CN": "bootstrap-datetimepicker.zh-CN.js",
-        "bootstrap.datetimepicker.TW": "bootstrap-datetimepicker.zh-TW.js",
-        "bootstrap.tag.min": "bootstrap-tag.min.js",
-        "bootstrap.wysiwyg": "bootstrap-wysiwyg.min.js",
-        "dust": "/components/dustjs-linkedin/dist/dust-core.min",
-        "dustHelper": "/components/dustjs-linkedin-helpers/dist/dust-helpers.min",
-        "jquery.hotkeys": "jquery.hotkeys.min.js",
-        "jquery.mobile.custom.min": "jquery.mobile.custom.min.js",
-        "jquery.slimscroll.min": "jquery.slimscroll.min.js",
-        "jquery.ui.touch-punch.min": "jquery.ui.touch-punch.min.js",
-        "jquery.validate": "jquery.validate.js",
-        "jquery.validate.min": "jquery.validate.min.js",
-        "bootbox.min": "bootbox.min.js",
-        "typeahead-bs2.min": "typeahead-bs2.min.js",
+    "paths": {
+        "jquery": "/js/jquery.min",
 
-        "admin.products": "templates/admin/products",
-        "layouts.master": "templates/layouts/master",
-        "salesupport.detail": "templates/salesupport/detail",
-        "salesupport.form": "templates/salesupport/form",
-        "salesupport.oneKeyRenew": "templates/salesupport/oneKeyRenew",
-        "salesupport.sale": "templates/salesupport/sale",
-        "system.user.add": "templates/user/add",
-        "system.user._form": "templates/user/_form"
+        "async":"/js/async.min",
+        "ace.extra": "/js/ace-extra.min",
+        "ace.elements": "/js/ace-elements.min",
+        "ace.min": "/js/ace.min",
+        "bootstrap": "/js/bootstrap.min",
+        "bootstrap.min": "/js/bootstrap.min",
+        "bootstrap.datetimepicker": "/js/bootstrap-datetimepicker.min",
+        "bootstrap.datetimepicker.min": "/js/bootstrap-datetimepicker.min",
+
+        /*"bootstrap.datetimepicker.CN": "/js/bootstrap-datetimepicker.zh-CN",*/
+
+        "bootstrap.tag.min": "/js/bootstrap-tag.min",
+        "bootstrap.wysiwyg": "/js/bootstrap-wysiwyg.min",
+        "dust": "/components/dustjs-linkedin/dist/dust-core.min",
+        "dustHelper": "/components/dustjs-helpers/dist/dust-helpers.min",
+        "jquery.hotkeys": "/js/jquery.hotkeys.min",
+        "jquery.mobile.custom.min": "/js/jquery.mobile.custom.min",
+        "jquery.slimscroll.min": "/js/jquery.slimscroll.min",
+        "jquery.ui.touch-punch.min": "/js/jquery.ui.touch-punch.min",
+        "jquery.validate": "/js/jquery.validate.min",
+        "jquery.validate.min": "/js/jquery.validate.min",
+        "bootbox.min": "/js/bootbox.min",
+        "typeahead-bs2.min": "/js/typeahead-bs2.min",
+
+        "admin.products": "/js/templates/admin/products",
+        "layouts.master": "/js/templates/layouts/master",
+        "salesupport.detail": "/js/templates/salesupport/detail",
+        "salesupport.form": "/js/templates/salesupport/form",
+        "salesupport.oneKeyRenew": "/js/templates/salesupport/oneKeyRenew",
+        "salesupport.sale": "/js/templates/salesupport/sale",
+        "system.user.add": "/js/templates/user/add",
+        "system.user._form": "/js/templates/user/_form"
 
     },
     "shim": {
         "bootstrap": {
             "deps": ["jquery"]
         },
+        "ace.elements":
+            {"deps":["ace.extra"]
+            },
+        "ace.min":{
+            "deps": ["bootstrap","ace.elements","ace.extra"]
+        },
+
+        "async": {
+            "exports": "async"
+        },
+        "bootstrap.tag.min":{
+            "deps":["bootstrap"]
+        },
+        "bootstrap.wysiwyg":{
+            "deps":["bootstrap"]
+        },
+
         "dustHelper": {
             "deps": ["dust"]
         },
         'jquery.validate': {
             "deps": ["jquery"]
         },
-        'bootstrap.datetimepicker.CN': {
-                "deps": ["jquery", "bootstrap.datetimepicker"]
+        "jquery.hotkeys":{
+            "deps":["jquery"]
         },
-        'bootstrap.datetimepicker':{
-                "deps": ["bootstrap.min"]
+        "bootstrap.datetimepicker":{
+            "deps" : ["bootstrap","bootstrap.min"]
         },
-
-        "admin.products": {
+        "bootstrap.datetimepicker.min":{
+            "deps" : ["bootstrap"]
+        },
+        /*"bootstrap.datetimepicker.CN": {
+                "deps": ["bootstrap","bootstrap.min"]
+        },*/
+        "layouts.master": {
             "deps": ["dust", "dustHelper"]
         },
-        "layouts.master": {
+        "admin.products": {
             "deps": ["dust", "dustHelper"]
         },
         "salesupport.detail": {
@@ -348,16 +372,20 @@ requirejs.config({
 
 requirejs([
     "jquery",
-    "ace.min",
-    "ace-elements",
-    "ace-extra",
+    "async",
     "bootstrap",
     "bootstrap.min",
+    "ace.extra",
+
+    "ace.elements",
+
+    "ace.min",
+
     "bootstrap.datetimepicker",
     "bootstrap.datetimepicker.min",
-    "bootstrap.datetimepicker.uk",
-    "bootstrap.datetimepicker.CN",
-    "bootstrap.datetimepicker.TW",
+
+
+
     "bootstrap.tag.min",
     "bootstrap.wysiwyg",
     "dust",
@@ -371,8 +399,9 @@ requirejs([
     "bootbox.min",
     "typeahead-bs2.min",
 
-    "admin.products",
     "layouts.master",
+    "admin.products",
+
     "salesupport.detail",
     "salesupport.form",
     "salesupport.oneKeyRenew",
@@ -383,5 +412,5 @@ requirejs([
 
 ],function($, bt, as){
     app.init($, bt, as);
-    app.user = user;
-})
+    //app.user = user;
+});

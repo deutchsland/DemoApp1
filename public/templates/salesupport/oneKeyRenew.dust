@@ -281,14 +281,17 @@
         </div>
     </form>
 </div>
+
+
 {/oneKeyRenew}
 {!<script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>!}
 
-<script type="text/javascript" src="../../dust-core-2.0.3.js"></script>{!../../代表相对路径，指public目录下  !}
+{!<script type="text/javascript" src="../../dust-core-2.0.3.js"></script>!}{!../../代表相对路径，指public目录下  !}{!
 <script type="text/javascript" src="../../js/jquery.validate.js"></script>
 <script type="text/javascript" src="../../js/templates/salesupport/oneKeyRenew.js"></script>
 <script type="text/javascript" src="../../js/templates/salesupport/form.js"></script>
-<script type="text/javascript" src="../../js/templates/salesupport/detail.js"></script>
+<script type="text/javascript" src="../../js/templates/salesupport/detail.js"></script>!}
+
 <script type="text/javascript">
     /*$("h3 #1spanC").click(function(){
 
@@ -311,22 +314,27 @@
             item.startProposalDate = "2099-12-31";
             formDate.item = item;
            // console.log("out ");
-            dust.render("salesupport.form",formDate , function(err, out) {
+
+            dust.render("layouts.master",formDate , function(err, out) {
                 console.log("out "+out);
-                $("#formDiv").html("<h1>"+"welcome"+"</h1>");
+               // $("#formDiv").html("<h1>"+"welcome"+"</h1>");
                 $("#formDiv").html(out);
+                //console.log("OK");
                 $("#partyForm").validate({
+
                     submitHandler: function(form) {
                         $(":button").attr("disabled", "true");
+                        console.log("abcd");
                         submitForm(form, '/sale/proposal', function(data){
+                            console.log("abcd");
                             $('.modal').modal('hide');
                             $('.modal-backdrop').remove();/**/
                         });
                     },
                     focusCleanup: true
                 });
-                $("#detailDiv").html("");
-                $("#interfacesDiv").html("");
+               // $("#detailDiv").html("");
+                //$("#interfacesDiv").html("");
             });
         });
         /*$("#addNewBtn").click(function() {

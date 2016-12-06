@@ -1,7 +1,9 @@
 {>"layouts/master" /}
 {<title}{title}{/title}
 {<body}
+
    <div style="padding-top: 20px;padding-bottom: 0px">
+
        {!<nav class="navbar navbar-default navbar-fix-top " style="background-color: cadetblue;padding: 20px;">
            <div class="container-fluid">
                 <div class="navbar-header">

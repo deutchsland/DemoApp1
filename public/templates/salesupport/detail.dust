@@ -6,6 +6,7 @@
         <table class="table table-hover table-condensed table-striped">
             <thead>
             <tr>
+
                 <th class="col-sm-1">号牌号码</th>
                 <th class="col-sm-1">号牌类型</th>
                 <th class="col-sm-2">车架号</th>
