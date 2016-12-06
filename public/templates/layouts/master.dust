@@ -9,11 +9,11 @@
     {!<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>!}
     {!<script type="text/javascript" src="/js/jquery.min.js" ></script>!}
     <script type="text/javascript" src="/js/jquery.min.js" ></script>
-    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+  {!  <script src="/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
     <script src=" /js/ace-extra.min.js" type="text/javascript"></script>
 
-    <script src="/js/ace.min.js" type="text/javascript"></script>
+    <script src="/js/ace.min.js" type="text/javascript"></script>!}
     {!<script src="http://bootboxjs.com/bootbox.js" type="text/javascript"></script>!}
 
     {!<script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>!}

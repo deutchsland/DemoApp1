@@ -308,20 +308,20 @@ requirejs.config({
         "bootstrap": {
             "deps": ["jquery"]
         },
-        "ace.elements":
+        'ace.elements':
             {"deps":["ace.extra"]
             },
-        "ace.min":{
+        'ace.min':{
             "deps": ["bootstrap","ace.elements","ace.extra"]
         },
 
         "async": {
             "exports": "async"
         },
-        "bootstrap.tag.min":{
+        'bootstrap.tag.min':{
             "deps":["bootstrap"]
         },
-        "bootstrap.wysiwyg":{
+        'bootstrap.wysiwyg':{
             "deps":["bootstrap"]
         },
 
@@ -331,84 +331,84 @@ requirejs.config({
         'jquery.validate': {
             "deps": ["jquery"]
         },
-        "jquery.hotkeys":{
+        'jquery.hotkeys':{
             "deps":["jquery"]
         },
-        "bootstrap.datetimepicker":{
+        'bootstrap.datetimepicker':{
             "deps" : ["bootstrap","bootstrap.min"]
         },
-        "bootstrap.datetimepicker.min":{
+        'bootstrap.datetimepicker.min':{
             "deps" : ["bootstrap"]
         },
         /*"bootstrap.datetimepicker.CN": {
                 "deps": ["bootstrap","bootstrap.min"]
         },*/
-        "layouts.master": {
+        'layouts.master': {
             "deps": ["dust", "dustHelper"]
         },
-        "admin.products": {
+        'admin.products': {
             "deps": ["dust", "dustHelper"]
         },
-        "salesupport.detail": {
+        'salesupport.detail': {
             "deps": ["dust", "dustHelper"]
         },
-        "salesupport.form": {
+        'salesupport.form': {
             "deps": ["dust", "dustHelper"]
         },
-        "salesupport.oneKeyRenew": {
+        'salesupport.oneKeyRenew': {
             "deps": ["dust", "dustHelper"]
         },
-        "salesupport.sale": {
+        'salesupport.sale': {
             "deps": ["dust", "dustHelper"]
         },
-        "system.user.add": {
+        'system.user.add': {
             "deps": ["dust", "dustHelper"]
         },
-        "system.user._form": {
+        'system.user._form': {
             "deps": ["dust", "dustHelper"]
         }
     }
 });
 
 requirejs([
-    "jquery",
-    "async",
-    "bootstrap",
-    "bootstrap.min",
-    "ace.extra",
+    'jquery',
+    'async',
+    'bootstrap',
+    'bootstrap.min',
+    'ace.extra',
 
-    "ace.elements",
+    'ace.elements',
 
-    "ace.min",
+    'ace.min',
 
-    "bootstrap.datetimepicker",
-    "bootstrap.datetimepicker.min",
+    'bootstrap.datetimepicker',
+    'bootstrap.datetimepicker.min',
 
 
 
-    "bootstrap.tag.min",
-    "bootstrap.wysiwyg",
-    "dust",
-    "dustHelper",
-    "jquery.hotkeys",
-    "jquery.mobile.custom.min",
-    "jquery.slimscroll.min",
-    "jquery.ui.touch-punch.min",
-    "jquery.validate",
-    "jquery.validate.min",
-    "bootbox.min",
-    "typeahead-bs2.min",
+    'bootstrap.tag.min',
+    'bootstrap.wysiwyg',
+    'dust',
+    'dustHelper',
+    'jquery.hotkeys',
+    'jquery.mobile.custom.min',
+    'jquery.slimscroll.min',
+    'jquery.ui.touch-punch.min',
+    'jquery.validate',
+    'jquery.validate.min',
+    'bootbox.min',
+    'typeahead-bs2.min',
 
-    "layouts.master",
-    "admin.products",
 
-    "salesupport.detail",
-    "salesupport.form",
-    "salesupport.oneKeyRenew",
-    "salesupport.sale",
-    "system.user.add",
-    "system.user._form"
+    'admin.products',
 
+    'salesupport.detail',
+    'salesupport.form',
+    'salesupport.oneKeyRenew',
+    'salesupport.sale',
+    'system.user.add',
+    'system.user._form',
+    'layouts.master',
 
 ],function($, bt, as){
     app.init($, bt, as);

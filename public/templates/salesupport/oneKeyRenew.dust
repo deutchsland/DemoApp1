@@ -292,6 +292,8 @@
 <script type="text/javascript" src="../../js/templates/salesupport/form.js"></script>
 <script type="text/javascript" src="../../js/templates/salesupport/detail.js"></script>!}
 
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+{!<script src="/js/jquery.datetimepicker.js" ></script>!}
 <script type="text/javascript">
     /*$("h3 #1spanC").click(function(){
 
@@ -315,7 +317,8 @@
             formDate.item = item;
            // console.log("out ");
 
-            dust.render("layouts.master",formDate , function(err, out) {
+            dust.render('layouts.master',formDate , function(err, out) {
+               // console.log(dust);
                 console.log("out "+out);
                // $("#formDiv").html("<h1>"+"welcome"+"</h1>");
                 $("#formDiv").html(out);
@@ -442,12 +445,14 @@
             $(this).removeClass("right_tab_cur");
             $("#divShow7").css({display:"none"});
         });*/
-        $(".form_datetime").datetimepicker({
+
+
+  /*      $(".form_datetime").datetimepicker({
             format: "yyyy-mm-dd hh:mm:ss",
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
-        });
+        });*/
 
 
 
