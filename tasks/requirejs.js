@@ -21,11 +21,12 @@ module.exports = function requirejs(grunt) {
                     "ace.elements": "ace-elements.min",
                     "ace.min": "ace.min",
                     "bootstrap":"bootstrap.min",
-                    "bootstrap.min":"bootstrap.min",
-                    "bootstrap.datetimepicker":"bootstrap-datetimepicker.min",
-                    "bootstrap.datetimepicker.min":"bootstrap-datetimepicker.min",
 
+                    /*"bootstrap.datetimepicker":"bootstrap-datetimepicker.min",*/
 
+                    "bootstrap.datetimepicker":"bootstrap.datepicker",
+                    "bootstrap.local.cn":"/local/bootstrap-datepicker.zh-CN",
+                    "bootEditable": "/components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min",
 
                     "bootstrap.tag.min":"bootstrap-tag.min",
                     "bootstrap.wysiwyg":"bootstrap-wysiwyg.min",
@@ -36,7 +37,7 @@ module.exports = function requirejs(grunt) {
                     "jquery.slimscroll.min":"jquery.slimscroll.min",
                     "jquery.ui.touch-punch.min":"jquery.ui.touch-punch.min",
                     "jquery.validate":"jquery.validate.min",
-                    "jquery.validate.min":"jquery.validate.min",
+                    "jquery.validate.extend": "jquery.validate.extend",
                     "bootbox.min":"bootbox.min",
                     "typeahead-bs2.min":"typeahead-bs2.min",
 

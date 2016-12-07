@@ -265,7 +265,7 @@ var app = {
 };
 
 requirejs.config({
-    "waitSeconds": 10,
+    "waitSeconds": 0,
     "urlArgs": "bust=" + (new Date()).getTime(),
     "paths": {
         "jquery": "/js/jquery.min",
@@ -275,9 +275,9 @@ requirejs.config({
         "ace.elements": "/js/ace-elements.min",
         "ace.min": "/js/ace.min",
         "bootstrap": "/js/bootstrap.min",
-        "bootstrap.min": "/js/bootstrap.min",
-        "bootstrap.datetimepicker": "/js/bootstrap-datetimepicker.min",
-        "bootstrap.datetimepicker.min": "/js/bootstrap-datetimepicker.min",
+
+
+       /* "bootEditable": "/components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min",*/
 
         /*"bootstrap.datetimepicker.CN": "/js/bootstrap-datetimepicker.zh-CN",*/
 
@@ -290,7 +290,10 @@ requirejs.config({
         "jquery.slimscroll.min": "/js/jquery.slimscroll.min",
         "jquery.ui.touch-punch.min": "/js/jquery.ui.touch-punch.min",
         "jquery.validate": "/js/jquery.validate.min",
-        "jquery.validate.min": "/js/jquery.validate.min",
+        "bootEditable":"/js/bootstrap-editable.min",
+        "bootstrap.datepicker":"/js/bootstrap.datepicker.min",
+        "bootstrap.local.cn":"/local/bootstrap-datepicker.zh-CN",
+        "jquery.validate.extend": "jquery.validate.extend",
         "bootbox.min": "/js/bootbox.min",
         "typeahead-bs2.min": "/js/typeahead-bs2.min",
 
@@ -307,6 +310,9 @@ requirejs.config({
     "shim": {
         "bootstrap": {
             "deps": ["jquery"]
+        },
+        "bootEditable": {
+            "deps": ["bootstrap"]
         },
         'ace.elements':
             {"deps":["ace.extra"]
@@ -334,12 +340,14 @@ requirejs.config({
         'jquery.hotkeys':{
             "deps":["jquery"]
         },
-        'bootstrap.datetimepicker':{
-            "deps" : ["bootstrap","bootstrap.min"]
+
+        "bootstrap.datepicker":{
+            "deps" : ["jquery"]
         },
-        'bootstrap.datetimepicker.min':{
-            "deps" : ["bootstrap"]
+        "bootstrap.local.cn":{
+            "deps": ["jquery", "bootstrap.datepicker"]
         },
+
         /*"bootstrap.datetimepicker.CN": {
                 "deps": ["bootstrap","bootstrap.min"]
         },*/
@@ -367,6 +375,7 @@ requirejs.config({
         'system.user._form': {
             "deps": ["dust", "dustHelper"]
         }
+
     }
 });
 
@@ -376,14 +385,15 @@ requirejs([
     'bootstrap',
     'bootstrap.min',
     'ace.extra',
-
+    'bootEditable',
     'ace.elements',
 
     'ace.min',
 
-    'bootstrap.datetimepicker',
-    'bootstrap.datetimepicker.min',
 
+
+    'bootstrap.datepicker',
+    'bootstrap.local.cn',
 
 
     'bootstrap.tag.min',
@@ -395,7 +405,7 @@ requirejs([
     'jquery.slimscroll.min',
     'jquery.ui.touch-punch.min',
     'jquery.validate',
-    'jquery.validate.min',
+
     'bootbox.min',
     'typeahead-bs2.min',
 
@@ -408,7 +418,7 @@ requirejs([
     'salesupport.sale',
     'system.user.add',
     'system.user._form',
-    'layouts.master',
+    'layouts.master'
 
 ],function($, bt, as){
     app.init($, bt, as);
