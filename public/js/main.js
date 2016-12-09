@@ -291,7 +291,7 @@ requirejs.config({
         "jquery.ui.touch-punch.min": "/js/jquery.ui.touch-punch.min",
         "jquery.validate": "/js/jquery.validate.min",
         "bootEditable":"/js/bootstrap-editable.min",
-        "bootstrap.datepicker":"/js/bootstrap.datepicker.min",
+        "bootstrap.datepicker":"/js/bootstrap-datepicker.min",
         "bootstrap.local.cn":"/local/bootstrap-datepicker.zh-CN",
         "jquery.validate.extend": "jquery.validate.extend",
         "bootbox.min": "/js/bootbox.min",

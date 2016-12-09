@@ -1,7 +1,7 @@
-<form class="form-horizontal"  method="post" id="partyForm"   >
+<form class="form-horizontal"  method="post" id="partyForm"  role="form" >
     <div class="form-group">
-        <label for="tokenNo"  class="col-sm-1 control-label" style="width:86px"><span class="required-indicator">*</span>号牌号码</label>
-        <div class="col-sm-3">
+        <label for="tokenNo"  class="col-sm-2 control-label" ><span class="required-indicator">*</span>号牌号码</label>
+        <div class="col-sm-2">
             <input type="text" class="form-control"  id="tokenNo" name="proposal[tokenNo]" value="{item.tokenNo}" required/>
         </div>
         <label for="tokenType"  class="col-sm-2 control-label">号牌类型</label>
@@ -21,24 +21,24 @@
 
     <div class="form-group">
 
-        <label for="engineNo"  class="col-sm-1 control-label" style="width:86px"><span class="required-indicator">*</span>发动机号</label>
-        <div class="col-sm-3">
+        <label for="engineNo"  class="col-sm-2 control-label" ><span class="required-indicator">*</span>发动机号</label>
+        <div class="col-sm-2">
             <input type="text"  class="form-control" id="engineNo"  name="proposal[engineNo]" value="{item.engineNo}" onkeyup="value=value.replace(/[\W]/g,'')"
                    onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" placeholder="仅限字母+数字" required/>
         </div>
         <label for="enrollDate" class="col-sm-2 control-label"><span class="required-indicator">*</span>初次登记日期</label>
         <div class="col-sm-2">
-            <input id="enrollDate"  class="datepicker" name="proposal[enrollDate]"   type="text" value="{item.enrollDate}"  />
+            <input id="enrollDate"  class="form-control date datepicker" name="proposal[enrollDate]"   type="text" value="{item.enrollDate}"  />
         </div>
-        <label for="startProposalDate"  class="col-sm-1 control-label" style="width: 100px" >首年投保日期</label>
+        <label for="startProposalDate"  class="col-sm-1 control-label" style="width: 100px"><span class="required-indicator">*</span>投保日期</label>
         <div class="col-sm-2">
             <input id="startProposalDate"  class="form-control date datepicker" name="proposal[startProposalDate]"  type="text" value="{item.startProposalDate}"  />
         </div>
 
     </div>
     <div class="form-group">
-        <label class="col-sm-1 control-label" style="width: 96px;" for="vinTypeNo">车型代码</label>
-        <div class="col-sm-5">
+        <label class="col-sm-2 control-label"  for="vinTypeNo">车型代码</label>
+        <div class="col-sm-2">
             <input type="text"  class="form-control" id="vinTypeNo" name="proposal[vinTypeNo]" value="{item.vinTypeNo}" readonly>
         </div>
         {!<div class="col-sm-3">
@@ -52,28 +52,28 @@
         </div>!}
 
 
-        <label for="viechleNo"  class="col-sm-1 control-label" style="width:156px"><span class="required-indicator">*</span>车辆型号</label>
-        <div class="col-sm-5">
+        <label for="viechleNo"  class="col-sm-2 control-label" ><span class="required-indicator">*</span>车辆型号</label>
+        <div class="col-sm-2">
             <input type="text"  class="form-control" id="viechleNo" name="proposal[viechleNo]" value="{item.viechleNo}" >
         </div>
 
 
-        <label for="purchasePrice"  class="col-sm-1 control-label" style="width:156px"><span class="required-indicator">*</span>新车购置价</label>
-        <div class="col-sm-5">
+        <label for="purchasePrice"  class="col-sm-1 control-label" style="width: 100px">新车购置价</label>
+        <div class="col-sm-2">
             <input type="text"  class="form-control" id="purchasePrice" name="proposal[purchasePrice]" value="{item.purchasePrice}" >
         </div>
     </div>
 
     <div class="form-group">
 
-        <label for="realNo"  class="col-sm-1 control-label" style="width:86px">车辆实际价值</label>
-        <div class="col-sm-3">
+        <label for="realNo"  class="col-sm-2 control-label" >车辆实际价值</label>
+        <div class="col-sm-2">
             <input type="text"  class="form-control" id="realNo"  name="proposal[realNo]" value="{item.realNo}" onkeyup="value=value.replace(/[\W]/g,'')"
                    onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" placeholder="仅限字母+数字" readonly/>
         </div>
         <label for="viechleType" class="col-sm-2 control-label">车辆种类</label>
-        <div class="col-sm-2">
-            <select id="viechleType"  class="" name="proposal[viechleType]" class="required">
+        <div class="col-sm-2" >
+            <select id="viechleType"  class="form-control" name="proposal[viechleType]" >
                 <option value="0">家庭自用</option>
                 <option value="1">货车</option>
                 <option value="2">单位用车</option>
@@ -82,7 +82,7 @@
         </div>
         <label for="customerNo"  class="col-sm-1 control-label" style="width: 100px" >核定载客</label>
         <div class="col-sm-2">
-            <input id="customerNo"  class="" name="proposal[customerNo]" class="required"  type="text" value=""  required/>
+            <input id="customerNo"  class="form-control" name="proposal[customerNo]" class="required"  type="text" value=""  required/>
         </div>
     </div>
 
@@ -93,21 +93,21 @@
 
 
     <div class="form-group">
-        <label for="quality" style="width:86px" class="col-sm-1 control-label">核定载质量<span class="required-indicator">*</span></label>
-        <div class="col-sm-3">
-            <input type="text" style="width:230px"  class="form-control" id="quality" name="proposal[quality]"
+        <label for="quality"  class="col-sm-2 control-label"><span class="required-indicator">*</span>核定载质量</label>
+        <div class="col-sm-2">
+            <input type="text"   class="form-control" id="quality" name="proposal[quality]"
                    value="{item.quality}" title="第三方连接地址如 携程网 http://www.ctrip.com" data-toggle="tooltip" required/>
         </div>
 
-        <label for="runDistance"  class="col-sm-1 control-label" style="width:162px">行驶里程</label>
-        <div class="col-sm-6">
-            <input type="text" style="width:230px"  class="form-control" id="runDistance" name="proposal[runDistance]"
+        <label for="runDistance"  class="col-sm-2 control-label" >行驶里程</label>
+        <div class="col-sm-2">
+            <input type="text"   class="form-control" id="runDistance" name="proposal[runDistance]"
                    value="{item.runDistance}" title="第三方连接地址如 携程网 http://www.ctrip.com" data-toggle="tooltip" required/>
         </div>
+        <label for="carOwnerCard"  class="col-sm-2 control-label" style="width:100px">行驶证车主</label>
 
-        <label for="carOwnerCard"  class="col-sm-1 control-label" style="width:162px">行驶证车主</label>
-        <div class="col-sm-6">
-            <input type="text" style="width:230px"  class="form-control" id="carOwnerCard" name="proposal[carOwnerCard]"
+        <div class="col-sm-2">
+            <input type="text"   class="form-control" id="carOwnerCard" name="proposal[carOwnerCard]"
                    value="{item.carOwnerCard}" title="第三方连接地址如 携程网 http://www.ctrip.com" data-toggle="tooltip" required/>
         </div>
     </div>

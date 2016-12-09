@@ -24,7 +24,7 @@ module.exports = function requirejs(grunt) {
 
                     /*"bootstrap.datetimepicker":"bootstrap-datetimepicker.min",*/
 
-                    "bootstrap.datetimepicker":"bootstrap.datepicker",
+                    "bootstrap.datepicker":"bootstrap-datepicker.min",
                     "bootstrap.local.cn":"/local/bootstrap-datepicker.zh-CN",
                     "bootEditable": "/components/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min",
 
