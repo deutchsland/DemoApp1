@@ -79,16 +79,18 @@ var submitForm = function(f, paction, callback) {
     }
 
     $.post(action + '?' + new Date().getTime(), $(form).serialize(), function(data, status) {
-        data.user = app.user;
+        //data.user = app.user;
         $(":button").attr("disabled", false);
         if (status === 'success') {
             if (data.err) {
                 var some_html = '<br><div class="alert alert-warning fade in">';
                 some_html += '<label>错误</label>' + JSON.stringify(data.err);
                 some_html += '</div>';
+               console.log(some_html+data.err);
                 var box = bootbox.alert(some_html);
             } else {
                 if (data.redirect) {
+                    console.log("data.redirect");
                     renderPage(data.redirect, function() {
                         if (cb && typeof cb === 'function') {
                             cb(data);
@@ -108,6 +110,7 @@ var submitForm = function(f, paction, callback) {
                         changeADefault();
                     });
                 } else if (data.view) {
+                    console.log("data.view");
                     dust.render(data.view, data, function(err, out) {
                         if (err) {
                             return alert(err);
@@ -146,7 +149,8 @@ var submitForm = function(f, paction, callback) {
             var some_html = '<br><div class="alert alert-danger fade in">';
             some_html += '<label>调用后台出错：' + xhr.statusText + '</label>';
             some_html += '</div>';
-            bootbox.alert(some_html);
+          //  bootbox.alert(some_html);
+            console.log("some_html");
         }
     });
 };

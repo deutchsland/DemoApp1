@@ -98,7 +98,7 @@
             <th width="12%"></th>
             <td ></td>
         </tr>
-        <tr style="display: none;">
+        {!<tr style="display: none;">
             <td><input type="hidden" id="policyNo" value="${param.policyNo}" /></td>
             <td><input type="hidden" id="userId" value="${param.userId}" /></td>
             <td><input type="hidden" id="custLevel" value="${param.custLevel}" /></td>
@@ -160,7 +160,7 @@
                 <input id="isCarReformHidden" type="hidden" value="${view.isCarReform}"/>
                 <input id="isSuccessHidden" type="hidden" value=""/>
             </td>
-        </tr>
+        </tr>!}
 
 
         <!--险别信息模块  end-->
@@ -250,7 +250,7 @@
 
     <!--车辆信息模块  start-->
     <form id="vehicleInfoForm">
-        <div id="divShow1" class="hidden">
+        <div id="divShow1" >
             {!<c:if test="${view.isCarReform == '1'}">
                     <jsp:include page="vehicleInfoNew.jsp"></jsp:include>
                 </c:if>

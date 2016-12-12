@@ -35,9 +35,7 @@
                     <td>{.engineNo}</td>
                     <td>{.enrollDate}</td>
                     <td>{.startProposalDate}</td>
-
                     {!<td>{@baseCode code="{.businessMode}" base="businessMode"/}</td>!}
-
                     <td>{.vinTypeNo}</td>
                     <td>{.viechleNo}</td>
                     <td>{.purchasePrice}</td>

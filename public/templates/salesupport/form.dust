@@ -69,7 +69,7 @@
         <label for="realNo"  class="col-sm-2 control-label" >车辆实际价值</label>
         <div class="col-sm-2">
             <input type="text"  class="form-control" id="realNo"  name="proposal[realNo]" value="{item.realNo}" onkeyup="value=value.replace(/[\W]/g,'')"
-                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" placeholder="仅限字母+数字" readonly/>
+                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" placeholder="仅限字母+数字" />
         </div>
         <label for="viechleType" class="col-sm-2 control-label">车辆种类</label>
         <div class="col-sm-2" >
