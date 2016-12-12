@@ -20,6 +20,7 @@ module.exports = function (router) {
     });
 
     router.post('/proposal',function(req,res){
+            console.log("come in");
             var proposalInfo  = req.body.proposal;
             var proposalModel = new Proposal(proposalInfo);
             proposalModel.save(function(err){

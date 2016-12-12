@@ -328,7 +328,7 @@
                 $("#partyForm").validate({
 
                     submitHandler: function(form) {
-                        $(":button").attr("disabled", "true");
+                       // $(":button").attr("disabled", "true");
                         console.log("abcd");
                         submitForm(form, '/sale/proposal', function(data){
                             console.log("abcd");

@@ -65,6 +65,7 @@ var state = {
         view: ''
     },
 };
+var bootbox;
 var submitForm = function(f, paction, callback) {
     var form = f;
     $(":button").attr("disabled", "true");
@@ -202,7 +203,7 @@ var changeADefault = function() {
 };
 
 
-var bootbox;
+
 var async;
 var app = {
     init: function($, bt, as) {
@@ -294,7 +295,7 @@ requirejs.config({
         "bootstrap.datepicker":"/js/bootstrap-datepicker.min",
         "bootstrap.local.cn":"/local/bootstrap-datepicker.zh-CN",
         "jquery.validate.extend": "jquery.validate.extend",
-        "bootbox.min": "/js/bootbox.min",
+        "bootbox": "/js/bootbox.min",
         "typeahead-bs2.min": "/js/typeahead-bs2.min",
 
         "admin.products": "/js/templates/admin/products",
@@ -406,7 +407,7 @@ requirejs([
     'jquery.ui.touch-punch.min',
     'jquery.validate',
 
-    'bootbox.min',
+    'bootbox',
     'typeahead-bs2.min',
 
 
